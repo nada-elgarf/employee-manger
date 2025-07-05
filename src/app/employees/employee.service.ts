@@ -15,66 +15,42 @@ export class EmployeeService {
       id: 1,
       fullName: 'John Smith',
       department: 'Engineering',
-      position: 'Senior Software Engineer',
-      email: 'john.smith@company.com',
-      phone: '+1 (555) 123-4567',
       hireDate: new Date('2020-03-15'),
-      salary: 95000,
       status: 'Active'
     },
     {
       id: 2,
       fullName: 'Sarah Johnson',
       department: 'Marketing',
-      position: 'Marketing Manager',
-      email: 'sarah.johnson@company.com',
-      phone: '+1 (555) 234-5678',
       hireDate: new Date('2019-07-22'),
-      salary: 78000,
       status: 'Active'
     },
     {
       id: 3,
       fullName: 'Michael Brown',
       department: 'Finance',
-      position: 'Financial Analyst',
-      email: 'michael.brown@company.com',
-      phone: '+1 (555) 345-6789',
       hireDate: new Date('2021-01-10'),
-      salary: 65000,
       status: 'Suspended'
     },
     {
       id: 4,
       fullName: 'Emily Davis',
       department: 'Human Resources',
-      position: 'HR Specialist',
-      email: 'emily.davis@company.com',
-      phone: '+1 (555) 456-7890',
       hireDate: new Date('2018-11-05'),
-      salary: 58000,
       status: 'Active'
     },
     {
       id: 5,
       fullName: 'David Wilson',
       department: 'Engineering',
-      position: 'DevOps Engineer',
-      email: 'david.wilson@company.com',
-      phone: '+1 (555) 567-8901',
       hireDate: new Date('2022-02-14'),
-      salary: 88000,
       status: 'Inactive'
     },
     {
       id: 6,
       fullName: 'Lisa Anderson',
       department: 'Sales',
-      position: 'Sales Representative',
-      email: 'lisa.anderson@company.com',
-      phone: '+1 (555) 678-9012',
       hireDate: new Date('2020-09-30'),
-      salary: 52000,
       status: 'Active'
     }
   ];

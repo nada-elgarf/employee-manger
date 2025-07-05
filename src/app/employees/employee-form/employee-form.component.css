@@ -106,7 +106,6 @@ button mat-icon {
   font-size: 20px;
 }
 
-/* Material form field radius grouped */
 .mat-mdc-form-field,
 .mat-mdc-form-field-outline,
 .mat-mdc-form-field-focus-overlay,
@@ -116,7 +115,6 @@ button mat-icon {
   margin-bottom: 16px;
 }
 
-/* Responsive typography and spacing */
 
 @media (min-width: 1200px) {
   .form-container {
@@ -281,7 +279,6 @@ button mat-icon {
   }
 }
 
-/* Smallest devices */
 @media (max-width: 319px) {
   .form-container {
     padding: 4px;
@@ -301,7 +298,6 @@ button mat-icon {
   }
 }
 
-/* Landscape low height screens */
 @media (max-height: 500px) and (orientation: landscape) {
   .form-container {
     min-height: auto;
@@ -326,14 +322,12 @@ button mat-icon {
   }
 }
 
-/* Focus outlines */
 .cancel-btn:focus,
 .submit-btn:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
 
-/* High contrast mode */
 @media (prefers-contrast: high) {
   .employee-form {
     border: 2px solid var(--dark-gray);
@@ -344,7 +338,6 @@ button mat-icon {
   }
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
@@ -352,7 +345,6 @@ button mat-icon {
   }
 }
 
-/* Print styles */
 @media print {
   .form-container {
     max-width: 100%;
