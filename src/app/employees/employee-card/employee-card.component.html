@@ -1,0 +1,58 @@
+<mat-card class="employee-card">
+  <mat-card-header>
+    <mat-card-title>{{ employee.fullName }}</mat-card-title>
+    <mat-card-subtitle>{{ employee.department }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="employee-info">
+      <div class="info-item">
+        <mat-icon>work</mat-icon>
+        <span>{{ employee.position }}</span>
+      </div>
+
+      <div class="info-item">
+        <mat-icon>email</mat-icon>
+        <span>{{ employee.email }}</span>
+      </div>
+
+      <div class="info-item">
+        <mat-icon>phone</mat-icon>
+        <span>{{ employee.phone }}</span>
+      </div>
+
+      <div class="info-item">
+        <mat-icon>calendar_today</mat-icon>
+        <span>Hired: {{ employee.hireDate | date:'MMM dd, yyyy' }}</span>
+      </div>
+
+      <div class="info-item">
+        <mat-icon>attach_money</mat-icon>
+        <span>Salary: ${{ employee.salary | number:'1.0-0' }}</span>
+      </div>
+
+      <div class="status-container">
+        <mat-chip [ngClass]="{
+                'status-active': employee.status === 'Active',
+                'status-suspended': employee.status === 'Suspended',
+                'status-inactive': employee.status === 'Inactive'
+              }">
+          <mat-icon>{{ getStatusIcon(employee.status) }}</mat-icon>
+          {{ employee.status }}
+        </mat-chip>
+      </div>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary" (click)="onEdit()" class="action-btn edit-btn">
+      <mat-icon>edit</mat-icon>
+      Edit
+    </button>
+
+    <button mat-raised-button color="warn" (click)="onDelete()" class="action-btn delete-btn">
+      <mat-icon>delete</mat-icon>
+      Delete
+    </button>
+  </mat-card-actions>
+</mat-card>

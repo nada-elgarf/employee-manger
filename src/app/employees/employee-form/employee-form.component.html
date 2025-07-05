@@ -1,0 +1,80 @@
+<div class="form-container">
+  <div class="form-header">
+    <h2>
+      <mat-icon>{{ editMode ? 'edit' : 'person_add' }}</mat-icon>
+      {{ editMode ? 'Edit Employee' : 'Add New Employee' }}
+    </h2>
+  </div>
+
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="employee-form">
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="fullName" placeholder="">
+        <mat-icon matSuffix>person</mat-icon>
+        @if (employeeForm.get('fullName')?.errors?.['required'] && employeeForm.get('fullName')?.touched) {
+        <mat-error>Full name is required</mat-error>
+        }
+        @if (employeeForm.get('fullName')?.errors?.['minlength'] && employeeForm.get('fullName')?.touched) {
+        <mat-error>Name must be more than 3 characters</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Department</mat-label>
+        <mat-select formControlName="department" placeholder="Select Department">
+          <mat-option value="Information Technology">Information Technology</mat-option>
+          <mat-option value="Human Resources">Human Resources</mat-option>
+          <mat-option value="Finance">Finance</mat-option>
+          <mat-option value="Marketing">Marketing</mat-option>
+          <mat-option value="Sales">Sales</mat-option>
+          <mat-option value="Operations">Operations</mat-option>
+        </mat-select>
+        <mat-icon matSuffix>business</mat-icon>
+        @if (employeeForm.get('department')?.errors?.['required'] && employeeForm.get('department')?.touched) {
+        <mat-error>Department is required</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Hire Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="hireDate" placeholder="Select hire date">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        @if (employeeForm.get('hireDate')?.errors?.['required'] && employeeForm.get('hireDate')?.touched) {
+        <mat-error>Hire date is required</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status" placeholder="Select Status">
+          <mat-option value="Active">Active</mat-option>
+          <mat-option value="Suspended">Suspended</mat-option>
+        </mat-select>
+        <mat-icon matSuffix>toggle_on</mat-icon>
+        @if (employeeForm.get('status')?.errors?.['required'] && employeeForm.get('status')?.touched) {
+        <mat-error>Status is required</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" mat-raised-button color="basic" (click)="onCancel()" class="cancel-btn">
+        <mat-icon>close</mat-icon>
+        Cancel
+      </button>
+
+      <button type="submit" mat-raised-button color="primary" [disabled]="!employeeForm.valid" class="submit-btn">
+        <mat-icon>{{ editMode ? 'save' : 'add' }}</mat-icon>
+        {{ editMode ? 'Save Changes' : 'Add Employee' }}
+      </button>
+    </div>
+  </form>
+</div>
