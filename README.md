@@ -1,27 +1,44 @@
-# EmployeeManager
+# Employee Management UI - Angular 17
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+## Demo Video
 
-## Development server
+You can watch a full video demonstration of the project here:  
+https://drive.google.com/file/d/1rFxyt_JchUdVwcVVZiN30gIUUc9URE5L/view?usp=sharing
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Task Description
 
-## Code scaffolding
+This project is a front-end task for the role of Front-End Developer using Angular 17.  
+The objective is to build a responsive Employee Management interface that includes a card-based layout for each employee and smart real-time search and filtering functionality.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+- Display employees in a responsive grid layout (3 to 4 cards per row on desktop, stacked on smaller screens)
+- Smart real-time search that filters across all fields (Full Name, Department, Hire Date, Status)
+- RxJS with debounceTime and filter for optimized search
+- Filter employees by status (All, Active, Suspended)
+- Add employee via modal form using Reactive Forms with validation
+- Edit existing employee data with pre-filled form
+- Delete employee with confirmation dialog
+- Responsive and clean UI using Angular Material
+- Modular file structure and reusable components
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Technologies Used
 
-## Running unit tests
+- Angular 17
+- TypeScript
+- RxJS
+- Angular Material
+- CSS
+- Reactive Forms
+- Vercel (Deployment)
+- Local mock data (no backend)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## How to Run the Project
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository
+2.ng serve -open
+2.ى
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
