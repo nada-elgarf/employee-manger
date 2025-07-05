@@ -58,7 +58,7 @@
 
 .form-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 16px;
   margin-top: 32px;
   padding-top: 24px;
@@ -258,9 +258,15 @@ button mat-icon {
 
   .form-actions {
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
     margin-top: 20px;
     padding-top: 16px;
+
+  }
+
+  .form-actions button {
+    margin: 0 auto;
   }
 
   .cancel-btn, .submit-btn {
