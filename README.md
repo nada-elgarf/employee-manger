@@ -38,7 +38,4 @@ The objective is to build a responsive Employee Management interface that includ
 
 1. Clone the repository
 2.ng serve -open
-2.ى
-
-
 
