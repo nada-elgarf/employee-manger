@@ -12,14 +12,15 @@
       </div>
 
       <div class="status-container">
-        <mat-chip class="status-chip" [ngClass]="{
+
+        <div class="status-chip" [ngClass]="{
             'status-active': employee.status === 'Active',
             'status-suspended': employee.status === 'Suspended',
             'status-inactive': employee.status === 'Inactive'
           }">
           <mat-icon>{{ getStatusIcon(employee.status) }}</mat-icon>
           {{ employee.status }}
-        </mat-chip>
+        </div>
       </div>
     </div>
   </mat-card-content>

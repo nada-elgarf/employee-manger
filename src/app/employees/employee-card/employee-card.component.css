@@ -104,9 +104,18 @@ mat-card-content {
 
 .info-item mat-icon {
   color: var(--primary-color);
-  font-size: 20px;
-  width: 20px;
-  height: 20px;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-item span {
+  display: inline-flex;
+  align-items: center;
 }
 
 .status-container {
@@ -150,6 +159,10 @@ mat-card-content {
 .status-chip mat-icon {
   font-size: 18px;
   color: white !important;
+  line-height: 1;
+  vertical-align: text-bottom;
+  margin-top: -1px;
+  margin-top: 6px;
 }
 
 mat-card-actions {
@@ -161,7 +174,6 @@ mat-card-actions {
   border-top: 1px solid #f1f5f9;
 }
 
-/* تصميم الأزرار */
 .action-btn {
   border-radius: 12px;
   font-weight: 700;
@@ -209,6 +221,9 @@ mat-card-actions {
   font-size: 18px;
   width: 18px;
   height: 18px;
+  line-height: 1;
+  vertical-align: text-bottom;
+  margin-top: -1px;
 }
 
 .employee-card-wrapper {
